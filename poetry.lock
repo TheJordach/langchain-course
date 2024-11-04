@@ -1885,27 +1885,27 @@ adal = ["adal (>=1.0.2)"]
 
 [[package]]
 name = "langchain"
-version = "0.2.3"
+version = "0.2.16"
 description = "Building applications with LLMs through composability"
 optional = false
 python-versions = "<4.0,>=3.8.1"
 files = [
-    {file = "langchain-0.2.3-py3-none-any.whl", hash = "sha256:5dc33cd9c8008693d328b7cb698df69073acecc89ad9c2a95f243b3314f8d834"},
-    {file = "langchain-0.2.3.tar.gz", hash = "sha256:81962cc72cce6515f7bd71e01542727870789bf8b666c6913d85559080c1a201"},
+    {file = "langchain-0.2.16-py3-none-any.whl", hash = "sha256:8f59ee8b45f268df4b924ea3b9c63e49286efa756d16b3f6a9de5c6e502c36e1"},
+    {file = "langchain-0.2.16.tar.gz", hash = "sha256:ffb426a76a703b73ac69abad77cd16eaf03dda76b42cff55572f592d74944166"},
 ]
 
 [package.dependencies]
 aiohttp = ">=3.8.3,<4.0.0"
 async-timeout = {version = ">=4.0.0,<5.0.0", markers = "python_version < \"3.11\""}
-langchain-core = ">=0.2.0,<0.3.0"
+langchain-core = ">=0.2.38,<0.3.0"
 langchain-text-splitters = ">=0.2.0,<0.3.0"
 langsmith = ">=0.1.17,<0.2.0"
-numpy = ">=1,<2"
+numpy = {version = ">=1,<2", markers = "python_version < \"3.12\""}
 pydantic = ">=1,<3"
 PyYAML = ">=5.3"
 requests = ">=2,<3"
 SQLAlchemy = ">=1.4,<3"
-tenacity = ">=8.1.0,<9.0.0"
+tenacity = ">=8.1.0,<8.4.0 || >8.4.0,<9.0.0"
 
 [[package]]
 name = "langchain-anthropic"
@@ -1948,22 +1948,23 @@ tenacity = ">=8.1.0,<9.0.0"
 
 [[package]]
 name = "langchain-core"
-version = "0.2.5"
+version = "0.2.38"
 description = "Building applications with LLMs through composability"
 optional = false
 python-versions = "<4.0,>=3.8.1"
 files = [
-    {file = "langchain_core-0.2.5-py3-none-any.whl", hash = "sha256:abe5138f22acff23a079ec538be5268bbf97cf023d51987a0dd474d2a16cae3e"},
-    {file = "langchain_core-0.2.5.tar.gz", hash = "sha256:4a5c2f56b22396a63ef4790043660e393adbfa6832b978f023ca996a04b8e752"},
+    {file = "langchain_core-0.2.38-py3-none-any.whl", hash = "sha256:8a5729bc7e68b4af089af20eff44fe4e7ca21d0e0c87ec21cef7621981fd1a4a"},
+    {file = "langchain_core-0.2.38.tar.gz", hash = "sha256:eb69dbedd344f2ee1f15bcea6c71a05884b867588fadc42d04632e727c1238f3"},
 ]
 
 [package.dependencies]
 jsonpatch = ">=1.33,<2.0"
-langsmith = ">=0.1.66,<0.2.0"
-packaging = ">=23.2,<24.0"
-pydantic = ">=1,<3"
+langsmith = ">=0.1.75,<0.2.0"
+packaging = ">=23.2,<25"
+pydantic = {version = ">=1,<3", markers = "python_full_version < \"3.12.4\""}
 PyYAML = ">=5.3"
-tenacity = ">=8.1.0,<9.0.0"
+tenacity = ">=8.1.0,<8.4.0 || >8.4.0,<9.0.0"
+typing-extensions = ">=4.7"
 
 [[package]]
 name = "langchain-google-firestore"
@@ -5120,4 +5121,4 @@ test = ["big-O", "importlib-resources", "jaraco.functools", "jaraco.itertools", 
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10.0,<3.12"
-content-hash = "2a27a6f6f9e5c25fdae0a4db23fa24a6e163b85fa54402887b84baca379f3aad"
+content-hash = "1eb2724920ba0a7b713c83a5326cc82ed35a0e72696ec781e610240cbd637331"
